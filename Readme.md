@@ -16,6 +16,11 @@ The logo uses Cinzel Decorative, this font is special and classic, but still pla
  - Homepage :  Introduces Tripana, has a big hero section with an image, a short intro, and smooth navigation.
  - Pottery Workshop Page : This is the first workshop I added,
 Shows the title, description, date, and location
+ - Features Page : Showcasing platform capabilities (trip planning, booking, maps, collaboration tools)
+ - Contact Page : Full contact form with email, phone, location info and social media links
+ - Pricing Page : Three-tier pricing (Explorer/Free, Adventurer/€19, Connoisseur/€49) with monthly/annual toggle and FAQ section
+ - About Us Page : Company story, core values, team section with 4 members, mission statement, and stats (12K+ travelers, 200+ partners)
+ - Blog Page : Featured article layout, filterable blog posts grid, newsletter signup section
 
 
 # Design & Layout Choices
