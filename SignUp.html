@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripana - Sign Up</title>
+    <link rel="stylesheet" href="css/SignUp.css">
+</head>
+<body>
+    <div class="container">
+        <div class="brand">Create Your Account in</div>
+        <h1 class="heading">Tripaña</h1>
+        
+        <form id="signupForm">
+            <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-input" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group password-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-input" placeholder="Create a password" id="password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+            </div>
+
+            <div class="form-group password-group">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-input" placeholder="Confirm your password" id="confirmPassword" required>
+                <span class="toggle-password" onclick="toggleConfirmPassword()">👁</span>
+            </div>
+
+            <div class="terms">
+                By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </div>
+            
+            <button type="submit" class="signup-btn">Create Account</button>
+        </form>
+
+        <div class="divider"><span>or continue with</span></div>
+
+        <div class="social-login">
+            <button type="button" class="social-btn" title="Sign up with Google">G</button>
+            <button type="button" class="social-btn" title="Sign up with Facebook">f</button>
+        </div>
+
+        <div class="login-link">
+            Already have an account? <a href="http://localhost:3000/SignIn.html#">Login</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const pwd = document.getElementById('password');
+            pwd.type = pwd.type === 'password' ? 'text' : 'password';
+        }
+
+        function toggleConfirmPassword() {
+            const pwd = document.getElementById('confirmPassword');
+            pwd.type = pwd.type === 'password' ? 'text' : 'password';
+        }
+
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+        });
+    </script>
+</body>
+</html>
