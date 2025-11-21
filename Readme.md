@@ -39,4 +39,19 @@ First draft, so only the Pottery Workshop is up for now
 Navigation works smoothly between homepage and workshop page
 Focused on modern, aesthetic, and user-friendly design
 
+**//Updated:**
+After many drafts and many to come i added the Login/signup pages 
+Major expansion! Added multiple core pages:
+ Features Page - Showcasing platform capabilities (trip planning, booking, maps, collaboration tools)
+ Contact Page - Full contact form with email, phone, location info and social media links
+ Pricing Page - Three-tier pricing (Explorer/Free, Adventurer/€19, Connoisseur/€49) with monthly/annual toggle and FAQ section
+ About Us Page - Company story, core values, team section with 4 members, mission statement, and stats (12K+ travelers, 200+ partners)
+ Blog Page - Featured article layout, filterable blog posts grid, newsletter signup section
+All pages maintain consistent design language:
+Gradient backgrounds (warm Spanish tones)
+Glassmorphism effects with backdrop blur
+Smooth hover animations and transitions
+Fully responsive layouts
+Cinzel Decorative font for headings, Poppins for body text
+
 # By : Bouchetit Anfel
