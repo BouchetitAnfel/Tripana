@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripana - Explore Spain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="css/Map.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="http://localhost:3000/Services.html">Services</a>
+                <a href="http://localhost:3000/Features.html">Features</a>
+                <a href="http://localhost:3000/Blog.html">Blog</a>
+            </div>
+            <div class="logo">Tripaña</div>
+            <div class="nav-right">
+                <a href="http://localhost:3000/AboutUs.html">About</a>
+                <a href="http://localhost:3000/Pricing.html#">Pricing</a>
+                <a href="http://localhost:3000/ContactUS.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <div class="brand">DISCOVER</div>
+        <h1>Explore Spain</h1>
+        <p>Interactive map featuring the best attractions, beaches, accommodations, and dining across Spain</p>
+    </div>
+
+    <div class="map-container">
+        <div class="filter-section">
+            <div class="filter-title">Filter by Category</div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterMarkers('all')">
+                    <span>🗺️</span> Show All
+                </button>
+                <button class="filter-btn" onclick="filterMarkers('attraction')">
+                    <span>🏛️</span> Attractions (10)
+                </button>
+                <button class="filter-btn" onclick="filterMarkers('beach')">
+                    <span>🏖️</span> Beaches (5)
+                </button>
+                <button class="filter-btn" onclick="filterMarkers('hotel')">
+                    <span>🏨</span> Hotels (4)
+                </button>
+                <button class="filter-btn" onclick="filterMarkers('restaurant')">
+                    <span>🍽️</span> Restaurants (3)
+                </button>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="legend">
+            <h3>Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="legend-icon">🏛️</span>
+                    <span class="legend-text">Historic Attractions</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon">🏖️</span>
+                    <span class="legend-text">Beautiful Beaches</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon">🏨</span>
+                    <span class="legend-text">Recommended Hotels</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-icon">🍽️</span>
+                    <span class="legend-text">Authentic Restaurants</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tripana. All rights reserved.</p>
+        <p>Email: info@dpointgroupe.com | Phone: +34 XXX XXX XXX</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script>
+        const map = L.map('map').setView([40.4168, -3.7038], 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        function createIcon(emoji) {
+            return L.divIcon({
+                html: `<div style="font-size: 24px;">${emoji}</div>`,
+                className: 'custom-marker',
+                iconSize: [30, 30]
+            });
+        }
+
+        let allMarkers = [];
+
+        const attractions = [
+            { name: "Sagrada Família", lat: 41.4036, lng: 2.1744, desc: "Gaudí's masterpiece, an iconic basilica", category: "attraction", icon: "🏛️" },
+            { name: "Alhambra", lat: 37.1773, lng: -3.5886, desc: "Stunning Moorish palace in Granada", category: "attraction", icon: "🏛️" },
+            { name: "Park Güell", lat: 41.4145, lng: 2.1527, desc: "Colorful park designed by Gaudí", category: "attraction", icon: "🏛️" },
+            { name: "Prado Museum", lat: 40.4138, lng: -3.6922, desc: "World-class art museum in Madrid", category: "attraction", icon: "🏛️" },
+            { name: "Cathedral of Seville", lat: 37.3858, lng: -5.9934, desc: "Largest Gothic cathedral in the world", category: "attraction", icon: "🏛️" },
+            { name: "Mezquita", lat: 37.8788, lng: -4.7797, desc: "Historic mosque-cathedral in Córdoba", category: "attraction", icon: "🏛️" },
+            { name: "Royal Palace Madrid", lat: 40.4179, lng: -3.7142, desc: "Official residence of Spanish royalty", category: "attraction", icon: "🏛️" },
+            { name: "Guggenheim Bilbao", lat: 43.2687, lng: -2.9394, desc: "Contemporary art museum", category: "attraction", icon: "🏛️" },
+            { name: "Toledo Alcázar", lat: 39.8578, lng: -4.0202, desc: "Medieval fortress on a hilltop", category: "attraction", icon: "🏛️" },
+            { name: "Casa Batlló", lat: 41.3916, lng: 2.1649, desc: "Modernist building by Gaudí", category: "attraction", icon: "🏛️" }
+        ];
+
+        const beaches = [
+            { name: "La Concha Beach", lat: 43.3183, lng: -1.9812, desc: "Beautiful urban beach in San Sebastián", category: "beach", icon: "🏖️" },
+            { name: "Playa de las Catedrales", lat: 43.5539, lng: -7.1575, desc: "Stunning rock formations on Galician coast", category: "beach", icon: "🏖️" },
+            { name: "Barceloneta Beach", lat: 41.3804, lng: 2.1896, desc: "Popular beach in Barcelona", category: "beach", icon: "🏖️" },
+            { name: "Ses Illetes Beach", lat: 38.7900, lng: 1.4172, desc: "Paradise beach in Formentera", category: "beach", icon: "🏖️" },
+            { name: "Playa de Muro", lat: 39.7936, lng: 3.1127, desc: "White sand beach in Mallorca", category: "beach", icon: "🏖️" }
+        ];
+
+        const hotels = [
+            { name: "Hotel Arts Barcelona", lat: 41.3858, lng: 2.1964, desc: "Luxury beachfront hotel", category: "hotel", icon: "🏨" },
+            { name: "Alfonso XIII Seville", lat: 37.3796, lng: -5.9887, desc: "Historic luxury hotel", category: "hotel", icon: "🏨" },
+            { name: "The Westin Palace Madrid", lat: 40.4163, lng: -3.6950, desc: "Belle Époque palace hotel", category: "hotel", icon: "🏨" },
+            { name: "Parador de Granada", lat: 37.1760, lng: -3.5884, desc: "Historic hotel in Alhambra grounds", category: "hotel", icon: "🏨" }
+        ];
+
+        const restaurants = [
+            { name: "El Celler de Can Roca", lat: 41.9902, lng: 2.8408, desc: "3 Michelin star restaurant in Girona", category: "restaurant", icon: "🍽️" },
+            { name: "Tickets Bar", lat: 41.3755, lng: 2.1508, desc: "Creative tapas by Albert Adrià", category: "restaurant", icon: "🍽️" },
+            { name: "Botín", lat: 40.4145, lng: -3.7073, desc: "World's oldest restaurant (1725)", category: "restaurant", icon: "🍽️" }
+        ];
+
+        const allLocations = [...attractions, ...beaches, ...hotels, ...restaurants];
+
+        allLocations.forEach(location => {
+            const marker = L.marker([location.lat, location.lng], {
+                icon: createIcon(location.icon)
+            }).addTo(map);
+
+            marker.category = location.category;
+
+            marker.bindPopup(`
+                <div class="popup-content">
+                    <div class="popup-category">${location.category.toUpperCase()}</div>
+                    <div class="popup-title">${location.name}</div>
+                    <div class="popup-description">${location.desc}</div>
+                </div>
+            `);
+
+            allMarkers.push(marker);
+        });
+
+        function filterMarkers(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.filter-btn').classList.add('active');
+
+            allMarkers.forEach(marker => {
+                if (category === 'all' || marker.category === category) {
+                    marker.addTo(map);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

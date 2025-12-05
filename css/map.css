@@ -1,0 +1,314 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #e8e3db;
+        }
+
+        header {
+            background: #e8e3db;
+            padding: 1.5rem 0;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-left a, .nav-right a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-left a:hover, .nav-right a:hover {
+            color: #8b7355;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 1000;
+            color: #333;
+            font-family: 'Cinzel Decorative', serif;
+            font-variant: small-caps;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .brand {
+            color: #8b7355;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-weight: 1000;
+            font-family: 'Cinzel Decorative', serif;
+            font-variant: small-caps;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .map-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 3rem 5rem;
+        }
+
+        .filter-section {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .filter-title {
+            font-size: 1.2rem;
+            color: #2c2c2c;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-btn:hover {
+            border-color: #8b7355;
+            color: #8b7355;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #8b7355 0%, #c5a87a 100%);
+            color: white;
+            border-color: #8b7355;
+        }
+
+        #map {
+            height: 600px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .legend {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .legend h3 {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .legend-icon {
+            font-size: 1.5rem;
+        }
+
+        .legend-text {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .leaflet-popup-content-wrapper {
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .leaflet-popup-content {
+            margin: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .custom-marker {
+            background: none !important;
+            border: none !important;
+        }
+
+        .marker-pin {
+            width: 40px;
+            height: 40px;
+            border-radius: 50% 50% 50% 0;
+            position: relative;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .marker-pin::after {
+            content: '';
+            width: 14px;
+            height: 14px;
+            background: white;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .marker-icon-inner {
+            position: absolute;
+            transform: rotate(45deg);
+            font-size: 16px;
+            color: white;
+            z-index: 2;
+        }
+
+        .marker-attraction {
+            background: linear-gradient(135deg, #8b7355 0%, #c5a87a 100%);
+        }
+
+        .marker-beach {
+            background: linear-gradient(135deg, #5ea3d0 0%, #7ec8e3 100%);
+        }
+
+        .marker-hotel {
+            background: linear-gradient(135deg, #d4a5a5 0%, #e8bebe 100%);
+        }
+
+        .marker-restaurant {
+            background: linear-gradient(135deg, #c77b5c 0%, #e09576 100%);
+        }
+
+        .popup-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-category {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b7355 0%, #c5a87a 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .popup-description {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 968px) {
+            .map-container {
+                padding: 1.5rem;
+            }
+
+            #map {
+                height: 500px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            #map {
+                height: 400px;
+            }
+
+            .filter-buttons {
+                flex-direction: column;
+            }
+
+            .filter-btn {
+                justify-content: center;
+            }
+        }
