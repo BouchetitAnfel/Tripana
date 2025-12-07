@@ -309,10 +309,12 @@ nav {
 .feature-item {
     padding: 2rem;
     transition: transform 0.3s;
+    border: 2px solid #c7a983;
+    border-radius: 20px;
 }
 
 .feature-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .feature-item h3 {
