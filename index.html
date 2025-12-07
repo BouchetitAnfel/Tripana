@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tripana</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-left">
+           <div class="nav-left">
                 <a href="http://localhost:3000/Services.html">Services</a>
                 <a href="http://localhost:3000/Features.html">Features</a>
                 <a href="http://localhost:3000/Blog.html">Blog</a>
@@ -26,67 +26,82 @@
     </header>
 
     <section class="hero">
-        <h1>Experience Authentic Spain.</h1>
-        <p>All-in-one platform to explore, learn, and immerse yourself in Spanish culture, richer and more memorable.</p>
-        <a href="#" class="hero-btn">Get started for Free <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-content">
+            <h1>Experience Authentic Spain.</h1>
+            <p>Your all-in-one platform to explore, learn, and immerse yourself in the rich tapestry of Spanish culture. Create memories that last forever.</p>
+            <div class="hero-buttons">
+                <a href="http://localhost:3000/SignIn.html" class="hero-btn">Get Started Free →</a>
+                <a href="map.html" class="map-btn">
+                    <svg class="map-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Explore Map
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
     </section>
 
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-card">
-                <img src="images/photo1.jpg" alt="photo1">
+                <img src="images/photo1.jpg" alt="Barcelona">
                 <div class="card-text">Discover Cities</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo2.jpg" alt="photo2">
+                <img src="images/photo2.jpg" alt="Architecture">
                 <div class="card-text">Discover Architecture</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo3.jpg" alt="photo3">
+                <img src="images/photo3.jpg" alt="Spain">
                 <div class="card-text">Discover Country</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo4.jpg" alt="photo4">
+                <img src="images/photo4.jpg" alt="Culture">
                 <div class="card-text">Discover Culture</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo5.jpg" alt="photo5">
+                <img src="images/photo5.jpg" alt="Beaches">
                 <div class="card-text">Discover Beaches</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo6.jpg" alt="photo6">
+                <img src="images/photo6.jpg" alt="People">
                 <div class="card-text">Discover People</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo7.jpg" alt="photo7">
+                <img src="images/photo7.jpg" alt="History">
                 <div class="card-text">Discover History</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo1.jpg" alt="photo1">
+                <img src="images/photo1.jpg" alt="Barcelona">
                 <div class="card-text">Discover Cities</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo2.jpg" alt="photo2">
+                <img src="images/photo2.jpg" alt="Architecture">
                 <div class="card-text">Discover Architecture</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo3.jpg" alt="photo3">
+                <img src="images/photo3.jpg" alt="Spain">
                 <div class="card-text">Discover Country</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo4.jpg" alt="photo4">
+                <img src="images/photo4.jpg" alt="Culture">
                 <div class="card-text">Discover Culture</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo5.jpg" alt="photo5">
+                <img src="images/photo5.jpg" alt="Beaches">
                 <div class="card-text">Discover Beaches</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo6.jpg" alt="photo6">
+                <img src="images/photo6.jpg" alt="People">
                 <div class="card-text">Discover People</div>
             </div>
             <div class="carousel-card">
-                <img src="images/photo7.jpg" alt="photo7">
+                <img src="images/photo7.jpg" alt="History">
                 <div class="card-text">Discover History</div>
             </div>
         </div>
@@ -115,68 +130,77 @@
     </section>
 
     <div class="bento-grid">
-    <div class="bento-card large bg-image" style="background-image: url('images/workshop.jpg');">
-        <h3>Hands-On Workshops</h3>
-        <p>Learn pottery, cooking, and traditional crafts from master artisans in intimate settings.</p>
-        <a href="pottery-workshop.html" class="bento-link">Explore Pottery Workshop →</a>
-    </div>
-    
-    <div class="bento-card large bg-image" style="background-image: url('images/iter.jpg');">
-        <h3>Custom Itineraries</h3>
-        <p>Easily create, design, and track your perfect Spanish adventure to keep everyone organized.</p>
-        <a href="andalusia-tour.html" class="bento-link">View Andalusia Tour →</a>
-    </div>
+        <div class="bento-card large bg-image" style="background-image: url('images/workshop.jpg');">
+            <h3>Hands-On Workshops</h3>
+            <p>Learn pottery, cooking, and traditional crafts from master artisans in intimate settings.</p>
+            <a href="#" class="bento-link">Explore Pottery Workshop →</a>
+        </div>
+        
+        <div class="bento-card large bg-image" style="background-image: url('images/iter.jpg');">
+            <h3>Custom Itineraries</h3>
+            <p>Easily create, design, and track your perfect Spanish adventure to keep everyone organized.</p>
+            <a href="#" class="bento-link">View Andalusia Tour →</a>
+        </div>
 
-    <div class="bento-card large bg-image" style="background-image: url('images/partner.jpg');">
-        <h3>Local Partnerships</h3>
-        <p>Connect with authentic venues, guides, and experts who bring Spain to life.</p>
-        <a href="cooking-class.html" class="bento-link">Join Cooking Class →</a>
-    </div>
+        <div class="bento-card large bg-image" style="background-image: url('images/partner.jpg');">
+            <h3>Local Partnerships</h3>
+            <p>Connect with authentic venues, guides, and experts who bring Spain to life.</p>
+            <a href="#" class="bento-link">Join Cooking Class →</a>
+        </div>
 
-    <div class="bento-card large bg-image" style="background-image: url('images/Flamen.jpg');">
-        <h3>Cultural Immersion</h3>
-        <p>Experience flamenco, cuisine, architecture, and traditions that define Spanish heritage.</p>
-        <a href="flamenco-experience.html" class="bento-link">Experience Flamenco →</a>
+        <div class="bento-card large bg-image" style="background-image: url('images/Flamen.jpg');">
+            <h3>Cultural Immersion</h3>
+            <p>Experience flamenco, cuisine, architecture, and traditions that define Spanish heritage.</p>
+            <a href="#" class="bento-link">Experience Flamenco →</a>
+        </div>
     </div>
-</div>
 
     <section class="results-section">
         <h2>Unforgettable Memories, Real Experiences</h2>
         <p>See how travelers around the world are discovering Spain through our workshops and cultural journeys.</p>
         <div class="results-grid">
-            <div class="result-card" style="background: linear-gradient(135deg, #d4c4b07e 0%, #e8d8c0 100%);">
+            <div class="result-card">
                 <div class="result-image">
-                    <img src="images/agirl2.jpg" alt="Traveler in pottery workshop">
+                    <img src="images/agirl2.jpg" alt="Traveler">
                 </div>
                 <div class="result-content">
-                    <p class="result-quote">"The pottery workshop in Seville was life-changing. Maria taught us centuries-old techniques with such passion and warmth."</p>
+                    <p class="result-quote">The pottery workshop in Seville was life changing. Maria taught us centuries-old techniques with such passion and warmth.</p>
                     <div class="result-author">
-                        <h4>Sarah Johnson</h4>
-                        <span>California, USA</span>
+                        <div class="author-initial">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>California, USA</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="result-card" style="background: linear-gradient(135deg, #8b735567 0%, #a68a6a 100%);">
+            <div class="result-card">
                 <div class="result-image">
-                    <img src="images/aguy.jpg" alt="Flamenco experience">
+                    <img src="images/aguy.jpg" alt="Traveler">
                 </div>
                 <div class="result-content">
-                    <p class="result-quote">"More than just a tour - we felt like locals. The flamenco session brought tears to my eyes."</p>
+                    <p class="result-quote">More than just a tour  we felt like locals. The flamenco session brought tears to my eyes , i really like it.</p>
                     <div class="result-author">
-                        <h4>Michael Chen</h4>
-                        <span>Singapore</span>
+                        <div class="author-initial">M</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <span>Singapore</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="result-card" style="background: linear-gradient(135deg, #c4a89d3d 0%, #e9c8bb 100%);">
+            <div class="result-card">
                 <div class="result-image">
-                    <img src="images/agirl1.jpg" alt="Cooking class in Barcelona">
+                    <img src="images/agirl1.jpg" alt="Traveler">
                 </div>
                 <div class="result-content">
-                    <p class="result-quote">"The cooking class exceeded all expectations. We learned family recipes passed down for generations."</p>
+                    <p class="result-quote">The cooking class exceeded all expectations. We learned family recipes passed down for generations.</p>
                     <div class="result-author">
-                        <h4>Emma Williams</h4>
-                        <span>London, UK</span>
+                        <div class="author-initial">E</div>
+                        <div class="author-info">
+                            <h4>Emma Williams</h4>
+                            <span>London, UK</span>
+                        </div>
                     </div>
                 </div>
             </div>
