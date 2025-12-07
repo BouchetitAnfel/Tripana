@@ -52,7 +52,7 @@
         }
 
         .hero-section {
-            height: 500px;
+            height: 400px;
             border-radius: 50px;
             background: linear-gradient(135deg, #c5a87a 9%, #9b8278 50%, #d4a5a5 80%, #8b7355 100%);
             display: flex;
@@ -81,12 +81,11 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            font-weight: 1000;
-            font-family: 'Cinzel Decorative', serif;
-            font-variant: small-caps;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;;
         }
 
         .hero-content p {
@@ -94,7 +93,7 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             font-weight: 400;
             opacity: 0.95;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
         .about-container {

@@ -83,10 +83,9 @@
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            font-weight: 1000;
-            font-family: 'Cinzel Decorative', serif;
-            font-variant: small-caps;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .hero-content p {

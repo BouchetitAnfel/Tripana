@@ -52,7 +52,7 @@
         }
 
         .hero-section {
-            height: 500px;
+            height: 400px;
             border-radius: 50px;
             background: linear-gradient(135deg, #c5a87a 9%, #9b8278 50%, #d4a5a5 80%, #8b7355 100%);
             display: flex;
