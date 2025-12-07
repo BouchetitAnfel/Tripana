@@ -12,15 +12,15 @@ The logo uses Cinzel Decorative, this font is special and classic, but still pla
  - Easy to say
  - Pairs nicely with clean fonts like Montserrat for the rest of the site
 
-# Pages I Built
- - Homepage :  Introduces Tripana, has a big hero section with an image, a short intro, and smooth navigation.
- - Pottery Workshop Page : This is the first workshop I added,
-Shows the title, description, date, and location
- - Features Page : Showcasing platform capabilities (trip planning, booking, maps, collaboration tools)
- - Contact Page : Full contact form with email, phone, location info and social media links
- - Pricing Page : Three-tier pricing (Explorer/Free, Adventurer/€19, Connoisseur/€49) with monthly/annual toggle and FAQ section
- - About Us Page : Company story, core values, team section with 4 members, mission statement, and stats (12K+ travelers, 200+ partners)
- - Blog Page : Featured article layout, filterable blog posts grid, newsletter signup section
+### Core Pages
+- **Homepage** - Hero section with smooth carousel showcasing Spanish destinations, feature grid highlighting platform capabilities
+- **Services Page** - Comprehensive overview of workshops, custom itineraries, local partnerships, and cultural immersion programs
+- **Workshop Pages** - Detailed workshop templates (Pottery, Cooking, Flamenco, Architecture tours) with booking information
+- **About Us** - Company story, mission, core values, team profiles, and impact statistics
+- **Blog** - Featured articles, filterable post grid, newsletter signup
+- **Pricing** - Three-tier plans (Explorer/Free, Adventurer/€19, Connoisseur/€49) with monthly/annual toggle and FAQ
+- **Contact** - Full contact form with map integration, location details, and social media links
+- **Features** - Platform capabilities showcase including trip planning tools and booking system
 
 
 # Design & Layout Choices
@@ -32,6 +32,14 @@ I went for warm, earthy tones inspired by Spanish pottery and landscapes:
 #000 / #c5a87a – buttons and text for contrast
 The goal? Make it elegant, welcoming, and a little artsy.
 
+## Design Elements
+- Frosted glass card effects (`rgba` backgrounds with blur)
+- Rounded corners (20-50px border-radius) for modern aesthetic
+- Subtle shadows and hover animations for depth
+- Gradient backgrounds and overlays
+- Geometric icons replacing emojis for professional look
+- Consistent spacing and typography hierarchy
+
 # Typography & Layout
 Cinzel Decorative for the logo : bold, unique
 Montserrat for everything else : modern, clean, readable
@@ -39,13 +47,15 @@ Layout is modular and responsive: hero section, carousel, feature grids, and wor
 
  - Added hover effects, subtle animations, and gradients to make it interactive and alive
 
-# Notes
-First draft, so only the Pottery Workshop is up for now
-Navigation works smoothly between homepage and workshop page
-Focused on modern, aesthetic, and user-friendly design
+### User Experience
+- **Authentication System** - Clean sign-in/sign-up pages with Google and Facebook login integration
+- **User Dashboard** - Personalized dashboard showing upcoming bookings, completed tours, statistics, and recommendations
+- **Profile Management** - Comprehensive profile page with personal information, account details, and travel preferences
+- **Interactive Elements** - Password toggles, form validation, smooth page transitions via JavaScript
 
-**//Updated:**
-After many drafts and many to come i added Major expansion Added multiple core pages.
+
+
+
 
 
 # By : Bouchetit Anfel
