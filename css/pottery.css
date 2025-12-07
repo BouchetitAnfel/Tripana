@@ -53,16 +53,15 @@ nav {
 }
 
 .workshop-hero {
-    height: 500px;
-    border-radius: 50px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 0;
-    box-shadow: #333333c3;
+    height: 400px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #c5a87a 9%, #9b8278 50%, #d4a5a5 80%, #8b7355 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 2rem 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .workshop-hero-content {
